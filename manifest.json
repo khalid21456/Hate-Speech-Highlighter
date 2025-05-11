@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Hate Speech Highlighter",
+  "version": "1.0",
+  "description": "Highlights hate speech on web pages.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
